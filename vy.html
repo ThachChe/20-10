@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>20/10</title>
+    <link rel="stylesheet" href="vy.css" />
+  </head>
+  <body>
+    <div class="text">HÔM NAY LÀ NGÀY TRỌNG ĐẠI CỦA NHỮNG NGƯỜI PHỤ NỮ</div>
+
+    <div class="anh">
+      <div class="xoay">
+        <img
+          class="traitim"
+          src="./snapedit_1760940025060.png"
+          alt="Ảnh trái tim"
+        />
+      </div>
+    </div>
+
+    <div class="text2"><h2>Chúc Chị Một Ngày 20/10 Thật Vui Vẻ :3</h2></div>
+    <div class="text3">
+      <h2>
+        Chúc Chị Sẽ Mãi Là Người Phụ Nữ<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Quyến Rũ và Xinh Đẹp
+      </h2>
+    </div>
+
+    <div class="heart">❤️</div>
+    <div class="heart" style="left: 60%; animation-delay: 1s">💖</div>
+    <div class="heart" style="left: 40%; animation-delay: 2s">💘</div>
+
+    <script>
+      // Hàm tạo tim ngẫu nhiên
+      function createHeart() {
+        const heart = document.createElement("div");
+        heart.classList.add("heart");
+        heart.textContent = ["💖", "💘", "❤️", "💓", "💕", "💗"][
+          Math.floor(Math.random() * 6)
+        ];
+
+        // Vị trí & kích thước ngẫu nhiên
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.fontSize = Math.random() * 20 + 10 + "px";
+        heart.style.animationDuration = Math.random() * 3 + 3 + "s";
+
+        document.body.appendChild(heart);
+
+        // Xóa tim sau 6 giây để đỡ nặng
+        setTimeout(() => heart.remove(), 6000);
+      }
+
+      // Tạo tim mỗi 300ms
+      setInterval(createHeart, 300);
+    </script>
+  </body>
+</html>
